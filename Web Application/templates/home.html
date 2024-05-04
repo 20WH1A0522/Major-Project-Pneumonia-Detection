@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<style>
+        h1 { 
+        font-size: 8em;
+        font-weight: bold;
+}
+.attractive-button {
+			display: inline-block;
+			position: relative;
+			font-size: 1.2rem;
+			padding: 12px 24px;
+			color: white;
+			background-color: #565554;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 5px 0px #82807b;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			overflow: hidden;
+		}
+
+		.attractive-button:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0%;
+			background-color: rgba(255, 255, 255, 0.3);
+			transform-origin: bottom center;
+			transform: skewY(45deg);
+			transition: all 0.2s ease-in-out;
+		}
+
+		.attractive-button:hover {
+			transform: translateY(2px);
+			box-shadow: 0px 2px 0px #939089;
+			background-color: #1f1f1e;
+			color: #f6efef;
+		}
+
+		.attractive-button:hover:before {
+			height: 100%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.attractive-button span {
+			position: relative;
+			z-index: 1;
+		}
+           
+        body{
+        background-image: url("https://www.healthywomen.org/media-library/animated-lungs.gif?id=29972099&width=742&quality=85");
+        background-size: cover;
+        background-position: center;
+		background-blend-mode: lighten;
+        }
+    </style>
+</head>
+<body><br><br>
+<h2 style="color:rgba(242, 211, 228);" align="center">See inside, know early: Your lungs, our concern.</h2><br><br><br><br><br><br>
+<form action="{{ url_for('index_page')}}">
+    <center><button style="margin-top: 100px;width: 500px; height: 100px; font-size: 35px;" class="attractive-button" type = "submit"><span>LET'S GET STARTED</span></button><br><br>
+</form>
+
+</body>
+</html>
